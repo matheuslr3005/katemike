@@ -62,7 +62,7 @@ export const Footer = () => {
         <span className="footer__credit">
           {t.footer.producedBy}{' '}
           <a href={site.laxUrl} target="_blank" rel="noopener noreferrer">
-            Lax
+            LAX
           </a>
         </span>
         <span>{t.footer.made}</span>

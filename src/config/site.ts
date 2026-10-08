@@ -10,8 +10,8 @@ export const site = {
   /** Link to the masterclass checkout / waitlist. Empty = falls back to contact. */
   masterclassUrl: '',
   pressKitUrl: 'https://presskitpro.app/katandmike/',
-  /** LAX Assessoria de Marketing — site that produced this page (from the sitelax / lax2 repos). */
-  laxUrl: 'https://matheuslr3005.github.io/lax2/',
+  /** LAX Assessoria de Marketing — Instagram profile of the agency that produced this page. */
+  laxUrl: 'https://www.instagram.com/laxassessoria/',
 } as const
 
 export const whatsappLink = (message: string): string | null =>
