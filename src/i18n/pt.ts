@@ -90,7 +90,8 @@ export const pt: Dict = {
   },
   footer: { rights: 'Todos os direitos reservados.', made: 'Dublin · São Paulo', producedBy: 'Produzido por' },
   meta: { title: 'Kat & Mike — DJs & Produtores · Dublin', description: 'Dupla brasileira de DJs e produtores baseada em Dublin, Irlanda. Groove Bass, street funk e a noite de São Paulo — ao vivo pela Europa. Entre na Masterclass de DJ da Kat & Mike.' },
-  a11y: { loading: 'Carregando', home: 'Kat & Mike — início', primaryNav: 'Principal', language: 'Idioma', menu: 'Menu', vinyl: 'Disco de vinil girando' },
+  intro: { loading: 'Carregando o set', skip: 'Pular abertura' },
+  a11y: { deck: 'Toca-discos de DJ', loading: 'Carregando', home: 'Kat & Mike — início', primaryNav: 'Principal', language: 'Idioma', menu: 'Menu', vinyl: 'Disco de vinil girando' },
   alts: {
     duo: 'Kat e Mike posando de jaqueta de couro e correntes',
     duoParty: 'Kat e Mike posando juntos de jaquetas verde e branca',

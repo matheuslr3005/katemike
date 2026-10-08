@@ -12,7 +12,7 @@ export const Hero = ({ ready }: HeroProps) => {
   const { t, lang } = useI18n()
   const root = useRef<HTMLElement>(null)
 
-  /* Entrance sequence — plays once the preloader hands over. */
+  /* Entrance sequence — plays once the intro hands over. */
   useGSAP(
     () => {
       if (!ready || prefersReducedMotion()) return

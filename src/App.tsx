@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { About } from './components/About'
 import { Cursor } from './components/Cursor'
+import { DeckIntro } from './components/DeckIntro'
 import { Duo } from './components/Duo'
 import { Events } from './components/Events'
 import { FloatingCta } from './components/FloatingCta'
@@ -10,7 +11,6 @@ import { Hero } from './components/Hero'
 import { Marquee } from './components/Marquee'
 import { Masterclass } from './components/Masterclass'
 import { Nav } from './components/Nav'
-import { Preloader } from './components/Preloader'
 import { VipList } from './components/VipList'
 import { I18nProvider, useI18n } from './i18n'
 import { ScrollTrigger } from './lib/gsap'
@@ -35,7 +35,7 @@ const Page = () => {
 
   return (
     <>
-      <Preloader onExit={() => setReady(true)} />
+      <DeckIntro onExit={() => setReady(true)} />
       <Cursor />
       <Nav />
       <main>

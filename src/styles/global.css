@@ -244,54 +244,119 @@ p {
   display: inline-block;
 }
 
-/* ───────────────────────── Preloader ───────────────────────── */
-.preloader {
+/* ───────────────────────── Intro (DJ deck) ───────────────────────── */
+.intro {
+  --hole: 0px;
   position: fixed;
   inset: 0;
   z-index: 200;
+  overflow: hidden;
+  background: #070708;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent var(--hole), #000 calc(var(--hole) + 1px));
+  mask-image: radial-gradient(circle at 50% 50%, transparent var(--hole), #000 calc(var(--hole) + 1px));
+}
+.intro__light {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 55% at 42% 55%, rgba(214, 169, 59, 0.16), transparent 70%),
+    radial-gradient(ellipse 40% 30% at 70% 15%, rgba(232, 55, 47, 0.1), transparent 70%);
+}
+.intro__camera {
+  position: absolute;
+  inset: 0;
   display: grid;
   place-items: center;
-  background: var(--bg);
 }
-.preloader__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+.deck {
+  width: min(94vw, 108vh);
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.7));
 }
-.preloader__vinyl {
-  width: clamp(90px, 14vw, 150px);
+.deck__disc {
+  transform-box: fill-box;
+  transform-origin: center;
 }
-.preloader__title {
+.deck__txt {
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  fill: #8a8a90;
+}
+.deck__txt--sm {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.deck__txt--brand {
+  font-size: 12px;
+  fill: #5d5d63;
+}
+.deck__label-text {
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 15px;
+}
+.intro__hud {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(1.2rem, 5vh, 3rem);
+  translate: -50% 0;
   display: flex;
   align-items: baseline;
-  gap: 0.18em;
-  font-family: var(--font-display);
-  font-size: clamp(4rem, 14vw, 11rem);
-  line-height: 1;
-}
-.preloader__mask {
-  display: inline-block;
-  overflow: hidden;
-  padding: 0.05em 0.04em 0.12em;
-}
-.preloader__word {
-  display: inline-block;
-}
-.preloader__word--amp {
-  color: var(--gold);
-  font-size: 0.6em;
-}
-.preloader__count {
-  position: absolute;
-  right: var(--gutter);
-  bottom: var(--gutter);
+  gap: 1rem;
   font-family: var(--font-label);
-  font-size: clamp(2.5rem, 8vw, 6rem);
   font-weight: 600;
-  line-height: 1;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.intro__pct {
+  min-width: 3.4ch;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  letter-spacing: 0.02em;
   color: var(--gold);
   font-variant-numeric: tabular-nums;
+}
+.intro__pct i {
+  font-style: normal;
+  font-size: 0.55em;
+  margin-left: 0.15em;
+}
+.intro__skip {
+  position: absolute;
+  right: var(--gutter);
+  bottom: clamp(1.2rem, 5vh, 3rem);
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: none;
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.3s, border-color 0.3s;
+}
+.intro__skip:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.intro-ring {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 201;
+  width: 0;
+  height: 0;
+  translate: -50% -50%;
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 0 40px rgba(214, 169, 59, 0.5), inset 0 0 40px rgba(214, 169, 59, 0.25);
 }
 
 /* ───────────────────────── Cursor ───────────────────────── */
@@ -1642,6 +1707,14 @@ p {
 }
 
 @media (max-width: 720px) {
+  .intro__hud {
+    bottom: calc(clamp(1.2rem, 5vh, 3rem) + 3.6rem);
+  }
+  .intro__skip {
+    left: 50%;
+    right: auto;
+    translate: -50% 0;
+  }
   .hero {
     padding-top: 6rem;
   }
