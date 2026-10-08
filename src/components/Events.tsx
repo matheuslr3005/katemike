@@ -8,7 +8,7 @@ import { setupReveals } from '../lib/reveal'
 import { scrollToTarget } from '../lib/scroll'
 import { Magnetic } from './Magnetic'
 
-const LOCALES: Record<Lang, string> = { en: 'en-IE', pt: 'pt-BR' }
+const LOCALES: Record<Lang, string> = { en: 'en-IE', pt: 'pt-BR', es: 'es-ES' }
 
 const formatDate = (iso: string, lang: Lang) => {
   const date = new Date(`${iso}T00:00:00`)

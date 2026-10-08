@@ -1,0 +1,92 @@
+import type { Dict } from './en'
+
+export const es: Dict = {
+  nav: { about: 'Historia', events: 'Shows', masterclass: 'Masterclass', contact: 'Contacto', cta: 'Unirse a la Masterclass' },
+  hero: {
+    eyebrow: 'Dúo de DJs y Productores — Dublín, Irlanda',
+    tagline: 'Groove Bass. Funk callejero. Noches de São Paulo. Directo a las pistas de Europa.',
+    ctaPrimary: 'Unirse a la Masterclass',
+    ctaSecondary: 'Contratar al dúo',
+    scroll: 'Desliza',
+  },
+  marquee: ['Groove Bass', 'Street Funk', 'São Paulo', 'Dublín', 'Cartel Room Mafia DJs', 'Masterclass de DJ'],
+  about: {
+    label: 'La historia',
+    manifesto:
+      'Dúo brasileño de DJs y productores musicales con base en Dublín, Irlanda. Groove Bass, street funk y la escena nocturna de São Paulo — un set impecable, mezcla precisa y una conexión inigualable con el público.',
+    body:
+      'Además de producir beats originales, Kat & Mike son portavoces de los MCs y DJs brasileños en la escena musical irlandesa, ampliando la visibilidad de la cultura brasileña en Europa. Fuerte presencia en los principales eventos de Dublín, gira reciente en Dubái y sets en más de siete países europeos.',
+    stats: [
+      { value: 7, suffix: '+', label: 'Países en Europa' },
+      { value: 1, suffix: 'x', label: 'Gira en Dubái — y vienen más' },
+      { value: 7, suffix: 'K+', label: 'Comunidad en Instagram' },
+    ],
+  },
+  duo: {
+    label: 'El dúo',
+    title: 'Elige un lado.',
+    hint: 'Arrastra el crossfader',
+    kat: 'Kat',
+    mike: 'Mike',
+    caption: 'Dos selectores. Un sonido. Desliza — la mezcla nunca es la misma.',
+  },
+  events: {
+    label: 'Próximos shows',
+    title: 'Ven a la pista',
+    sub: 'Las fechas se anuncian primero en la lista VIP.',
+    tba: 'Por confirmar',
+    cta: 'Quiero que me avisen',
+    bookTitle: '¿Tu ciudad, tu noche?',
+    bookCta: 'Contratar a Kat & Mike',
+  },
+  masterclass: {
+    label: 'Masterclass de DJ',
+    title: 'Aprende a ser DJ con quienes están en las bandejas.',
+    sub: 'Cursos de DJ presenciales y profesionales con Kat & Mike — las mismas técnicas que llevan a las mejores noches de Dublín y a escenarios de siete países, enseñadas a nuevos talentos.',
+    ctaPrimary: 'Quiero entrar',
+    ctaSecondary: 'Hacer una pregunta',
+    modulesTitle: 'Lo que vas a aprender',
+    forTitle: 'Para quién es',
+    forItems: [
+      'Principiantes que quieren empezar de la forma correcta',
+      'DJs de habitación listos para tocar ante un público real',
+      'Productores que quieren presentar su propio sonido',
+    ],
+    formatTitle: 'El formato',
+    formatItems: [
+      { k: 'Presencial', v: 'Manos a la obra, en bandejas reales' },
+      { k: 'Profesional', v: 'Impartido por DJs de club en activo' },
+      { k: 'Sede', v: 'Dublín, Irlanda' },
+    ],
+    priceNote: 'Fechas, precio y próxima edición bajo consulta.',
+    faqTitle: 'Preguntas',
+    faq: [
+      { q: '¿Necesito experiencia?', a: 'No. Adaptamos el contenido al punto en el que estás hoy — de tu primera mezcla a tu primera contratación.' },
+      { q: '¿Necesito mi propio equipo?', a: 'Cuéntanos qué tienes y te orientamos. La práctica es con equipo de club de verdad.' },
+      { q: '¿Dónde se realiza?', a: 'De forma presencial, en Dublín. Escríbenos si quieres que vayamos a tu ciudad.' },
+      { q: '¿Cómo me inscribo?', a: 'Pulsa “Quiero entrar”. Te responderemos con las próximas fechas y todo lo que necesitas saber.' },
+    ],
+  },
+  gallery: { label: 'En las bandejas', title: 'Captados en la cabina' },
+  vip: {
+    label: 'Lista VIP',
+    title: 'Únete a la lista VIP',
+    sub: 'Recibe música, fechas de shows y novedades de la Masterclass antes que nadie.',
+    name: 'Nombre',
+    email: 'Correo electrónico',
+    whatsapp: 'WhatsApp',
+    submit: 'Unirme',
+    sending: 'Enviando…',
+    thanks: 'Ya estás dentro. Nos vemos en la pista.',
+    error: 'Algo salió mal. Inténtalo de nuevo o escríbenos por Instagram.',
+  },
+  contact: {
+    label: 'Contacto',
+    title: 'A hacer ruido.',
+    mgmt: 'Management',
+    press: 'Press kit',
+    follow: 'Síguenos',
+  },
+  footer: { rights: 'Todos los derechos reservados.', made: 'Dublín · São Paulo' },
+  cursor: { drag: 'Arrastra', view: 'Ver' },
+}

@@ -4,7 +4,7 @@ import { gsap, prefersReducedMotion, ScrollTrigger, useGSAP } from '../lib/gsap'
 import { scrollToTarget } from '../lib/scroll'
 import { Magnetic } from './Magnetic'
 
-const LANGS: readonly Lang[] = ['en', 'pt']
+const LANGS: readonly Lang[] = ['en', 'pt', 'es']
 
 export const Nav = () => {
   const { t, lang, setLang } = useI18n()

@@ -1,11 +1,13 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { en, type Dict } from './en'
+import { es } from './es'
 import { pt } from './pt'
 
-export type Lang = 'en' | 'pt'
+export type Lang = 'en' | 'pt' | 'es'
 
-const dictionaries: Record<Lang, Dict> = { en, pt }
+const dictionaries: Record<Lang, Dict> = { en, pt, es }
 const STORAGE_KEY = 'km-lang'
+const HTML_LANG: Record<Lang, string> = { en: 'en', pt: 'pt-BR', es: 'es' }
 
 type I18nValue = { lang: Lang; t: Dict; setLang: (lang: Lang) => void }
 
@@ -14,11 +16,14 @@ const I18nContext = createContext<I18nValue | null>(null)
 const readInitialLang = (): Lang => {
   try {
     const stored = window.localStorage.getItem(STORAGE_KEY)
-    if (stored === 'en' || stored === 'pt') return stored
+    if (stored === 'en' || stored === 'pt' || stored === 'es') return stored
   } catch {
     // storage unavailable (private mode) — fall through to browser language
   }
-  return navigator.language.toLowerCase().startsWith('pt') ? 'pt' : 'en'
+  const browser = navigator.language.toLowerCase()
+  if (browser.startsWith('pt')) return 'pt'
+  if (browser.startsWith('es')) return 'es'
+  return 'en'
 }
 
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
@@ -34,7 +39,7 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
   }, [])
 
   useEffect(() => {
-    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en'
+    document.documentElement.lang = HTML_LANG[lang]
   }, [lang])
 
   const value = useMemo<I18nValue>(() => ({ lang, t: dictionaries[lang], setLang }), [lang, setLang])

@@ -34,3 +34,10 @@ A lista atual é **placeholder**.
 ## Motion & interação
 Preloader com contagem · entrada do hero com split de letras · cursor customizado · botões magnéticos · faixas que aceleram/inclinam com a velocidade do scroll · vinil que gira mais rápido ao rolar · manifesto que "acende" palavra a palavra · tilt 3D no pôster · **crossfader Kat ↔ Mike** · lista de shows com preview de foto · transição "card → tela cheia" na Masterclass · módulos em scroll horizontal fixado · FAQ em acordeão · galeria arrastável · CTA flutuante durante a Masterclass.
 Respeita `prefers-reduced-motion` (sem preloader, sem animações, tudo visível).
+
+## Idiomas
+EN, PT-BR e ES (seletor no topo; detecta o idioma do navegador). Para ajustar textos: `src/i18n/{en,pt,es}.ts`.
+
+## Publicação (GitHub Pages)
+O workflow `.github/workflows/deploy.yml` faz build e publica a cada push. Uma vez só, em **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+URL: `https://matheuslr3005.github.io/katemike/`
