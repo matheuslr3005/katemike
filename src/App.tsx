@@ -4,6 +4,7 @@ import { Cursor } from './components/Cursor'
 import { DeckIntro } from './components/DeckIntro'
 import { Duo } from './components/Duo'
 import { Events } from './components/Events'
+import { Films } from './components/Films'
 import { FloatingCta } from './components/FloatingCta'
 import { Footer } from './components/Footer'
 import { Gallery } from './components/Gallery'
@@ -46,6 +47,7 @@ const Page = () => {
         <About />
         <Duo />
         <Events />
+        <Films />
         <Masterclass />
         <Gallery />
         <VipList />

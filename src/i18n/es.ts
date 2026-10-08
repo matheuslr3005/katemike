@@ -1,7 +1,7 @@
 import type { Dict } from './en'
 
 export const es: Dict = {
-  nav: { about: 'Historia', events: 'Shows', masterclass: 'Masterclass', contact: 'Contacto', cta: 'Unirse a la Masterclass' },
+  nav: { about: 'Historia', events: 'Shows', films: 'After Movies', masterclass: 'Masterclass', contact: 'Contacto', cta: 'Unirse a la Masterclass' },
   hero: {
     eyebrow: 'Dúo de DJs y Productores — Dublín, Irlanda',
     tagline: 'Groove Bass. Funk callejero. Noches de São Paulo. Directo a las pistas de Europa.',
@@ -67,6 +67,27 @@ export const es: Dict = {
       { q: '¿Cómo me inscribo?', a: 'Pulsa “Quiero entrar”. Te responderemos con las próximas fechas y todo lo que necesitas saber.' },
     ],
   },
+  films: {
+    label: 'Showreel',
+    title: 'Sets y after movies',
+    sub: 'Shows, festivales y eventos privados — listos para ver y enviar a promotores y clientes.',
+    filters: { all: 'Todos', aftermovie: 'After movies', set: 'Sets' },
+    kind: { aftermovie: 'After movie', set: 'Set' },
+    soon: 'Próximamente',
+    play: 'Ver',
+    copy: 'Copiar enlace',
+    copied: 'Enlace copiado',
+    shareTitle: 'Enviar a un cliente',
+    whatsapp: 'WhatsApp',
+    email: 'Correo',
+    original: 'Abrir original',
+    close: 'Cerrar',
+    empty: 'Aún no hay nada en esta categoría.',
+    shareMessage: 'Kat & Mike — {title}. Míralo aquí:',
+    ctaTitle: '¿Organizas un evento?',
+    ctaText: 'Cuéntanos la fecha, el lugar y el ambiente. Te enviamos el showreel completo y una propuesta.',
+    ctaButton: 'Pedir el showreel',
+  },
   gallery: { label: 'En las bandejas', title: 'Captados en la cabina' },
   vip: {
     label: 'Lista VIP',
@@ -86,7 +107,7 @@ export const es: Dict = {
     mgmt: 'Management',
     press: 'Press kit',
     follow: 'Síguenos',
-    subjects: { booking: 'Contratación — Kat & Mike', join: 'Masterclass — quiero entrar', question: 'Masterclass — pregunta', vip: 'Lista VIP' },
+    subjects: { booking: 'Contratación — Kat & Mike', join: 'Masterclass — quiero entrar', question: 'Masterclass — pregunta', vip: 'Lista VIP', showreel: 'Solicitud de showreel' },
   },
   footer: { rights: 'Todos los derechos reservados.', made: 'Dublín · São Paulo', producedBy: 'Producido por' },
   meta: { title: 'Kat & Mike — DJs y Productores · Dublín', description: 'Dúo brasileño de DJs y productores con base en Dublín, Irlanda. Groove Bass, street funk y la noche de São Paulo — en vivo por toda Europa. Únete a la Masterclass de DJ de Kat & Mike.' },

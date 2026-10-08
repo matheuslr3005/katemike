@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { useI18n } from '../i18n'
 import { gsap, prefersReducedMotion, useGSAP } from '../lib/gsap'
 import { lockScroll } from '../lib/scroll'
+import { filmIdFromHash } from '../lib/share'
 
 type DeckIntroProps = { onExit: () => void }
 
@@ -36,7 +37,8 @@ export const DeckIntro = ({ onExit }: DeckIntroProps) => {
 
   useGSAP(
     () => {
-      if (prefersReducedMotion()) {
+      // Reduced motion, or a shared film link (/#film=…): go straight to the site.
+      if (prefersReducedMotion() || filmIdFromHash(window.location.hash)) {
         onExit()
         setGone(true)
         return

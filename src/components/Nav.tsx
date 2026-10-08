@@ -14,6 +14,7 @@ export const Nav = () => {
   const links = [
     { href: '#about', label: t.nav.about },
     { href: '#events', label: t.nav.events },
+    { href: '#aftermovies', label: t.nav.films },
     { href: '#masterclass', label: t.nav.masterclass },
     { href: '#contact', label: t.nav.contact },
   ]
