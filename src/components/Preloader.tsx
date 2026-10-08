@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { useI18n } from '../i18n'
 import { gsap, prefersReducedMotion, useGSAP } from '../lib/gsap'
 import { lockScroll } from '../lib/scroll'
 import { Vinyl } from './Vinyl'
@@ -9,6 +10,7 @@ const MIN_DURATION_S = 1.8
 const FONT_TIMEOUT_MS = 2500
 
 export const Preloader = ({ onExit }: PreloaderProps) => {
+  const { t } = useI18n()
   const root = useRef<HTMLDivElement>(null)
   const counter = useRef<HTMLSpanElement>(null)
   const [gone, setGone] = useState(false)
@@ -71,7 +73,7 @@ export const Preloader = ({ onExit }: PreloaderProps) => {
   if (gone) return null
 
   return (
-    <div ref={root} className="preloader" role="status" aria-label="Loading">
+    <div ref={root} className="preloader" role="status" aria-label={t.a11y.loading}>
       <div className="preloader__inner">
         <Vinyl className="preloader__vinyl" speed={4} />
         <p className="preloader__title" aria-hidden="true">

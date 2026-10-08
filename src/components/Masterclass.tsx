@@ -7,12 +7,12 @@ import { setupReveals } from '../lib/reveal'
 import { Magnetic } from './Magnetic'
 import { Vinyl } from './Vinyl'
 
-const joinHref = () => site.masterclassUrl || contactLink('Masterclass — I want in')
-const askHref = () => contactLink('Masterclass — question')
 
 export const Masterclass = () => {
   const { t, lang } = useI18n()
   const root = useRef<HTMLDivElement>(null)
+  const joinHref = site.masterclassUrl || contactLink(t.contact.subjects.join)
+  const askHref = contactLink(t.contact.subjects.question)
   const [openFaq, setOpenFaq] = useState<number | null>(0)
 
   useGSAP(
@@ -83,17 +83,17 @@ export const Masterclass = () => {
         <div className="wrap mc__grid">
           <div className="mc__copy">
             <p className="label" data-reveal>{t.masterclass.label}</p>
-            <h2 className="display mc__title" data-split="lines">{t.masterclass.title}</h2>
+            <h2 key={lang} className="display mc__title" data-split="lines">{t.masterclass.title}</h2>
             <p className="mc__sub" data-reveal>{t.masterclass.sub}</p>
             <div className="mc__cta" data-reveal>
               <Magnetic>
-                <a className="btn btn--dark" href={joinHref()} target="_blank" rel="noreferrer">
+                <a className="btn btn--dark" href={joinHref} target="_blank" rel="noreferrer">
                   {t.masterclass.ctaPrimary}
                   <span className="btn__arrow" aria-hidden="true">→</span>
                 </a>
               </Magnetic>
               <Magnetic>
-                <a className="btn btn--outline-dark" href={askHref()} target="_blank" rel="noreferrer">
+                <a className="btn btn--outline-dark" href={askHref} target="_blank" rel="noreferrer">
                   {t.masterclass.ctaSecondary}
                 </a>
               </Magnetic>
@@ -109,7 +109,7 @@ export const Masterclass = () => {
       <section className="mc mc--modules" aria-labelledby="modules-title">
         <div className="modules__pin">
           <div className="wrap modules__head">
-            <h3 id="modules-title" className="modules__title" data-split="lines">{t.masterclass.modulesTitle}</h3>
+            <h3 key={lang} id="modules-title" className="modules__title" data-split="lines">{t.masterclass.modulesTitle}</h3>
             <div className="modules__bar" aria-hidden="true"><span className="modules__bar-fill" /></div>
           </div>
           <ol className="modules__track">
@@ -185,7 +185,7 @@ export const Masterclass = () => {
 
         <div className="wrap mc__final" data-reveal>
           <Magnetic strength={0.2}>
-            <a className="btn btn--dark btn--lg" href={joinHref()} target="_blank" rel="noreferrer">
+            <a className="btn btn--dark btn--lg" href={joinHref} target="_blank" rel="noreferrer">
               {t.masterclass.ctaPrimary}
               <span className="btn__arrow" aria-hidden="true">→</span>
             </a>

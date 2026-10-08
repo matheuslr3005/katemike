@@ -21,7 +21,7 @@ export const FloatingCta = () => {
   return (
     <a
       className={`floating-cta ${visible ? 'is-visible' : ''}`}
-      href={site.masterclassUrl || contactLink('Masterclass — I want in')}
+      href={site.masterclassUrl || contactLink(t.contact.subjects.join)}
       target="_blank"
       rel="noreferrer"
       tabIndex={visible ? 0 : -1}

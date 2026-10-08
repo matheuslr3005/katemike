@@ -42,16 +42,16 @@ export const Duo = () => {
     <section ref={root} className="duo section" aria-labelledby="duo-title">
       <div className="wrap">
         <p className="label" data-reveal>{t.duo.label}</p>
-        <h2 id="duo-title" className="display duo__title" data-split="lines">{t.duo.title}</h2>
+        <h2 key={lang} id="duo-title" className="display duo__title" data-split="lines">{t.duo.title}</h2>
       </div>
 
       <div ref={stage} className="duo__stage" style={{ '--mix': 0.5 } as React.CSSProperties}>
         <figure className="duo__panel duo__panel--kat">
-          <img src={photos.katHeart} alt="Kat DJing, making a heart with her hands" loading="lazy" />
+          <img src={photos.katHeart} alt={t.alts.katHeart} loading="lazy" />
           <figcaption className="duo__name">{t.duo.kat}</figcaption>
         </figure>
         <figure className="duo__panel duo__panel--mike">
-          <img src={photos.mikeMic} alt="Mike on the mic wearing a Technics headband" loading="lazy" />
+          <img src={photos.mikeMic} alt={t.alts.mikeMic} loading="lazy" />
           <figcaption className="duo__name">{t.duo.mike}</figcaption>
         </figure>
       </div>

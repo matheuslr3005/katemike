@@ -81,12 +81,12 @@ export const About = () => {
     <section ref={root} id="about" className="about section">
       <div className="wrap">
         <p className="label" data-reveal>{t.about.label}</p>
-        <p className="about__manifesto">{t.about.manifesto}</p>
+        <p key={lang} className="about__manifesto">{t.about.manifesto}</p>
 
         <div className="about__grid">
           <figure ref={poster} className="about__poster" data-cursor="K4T">
             <div className="about__poster-frame">
-              <img src={photos.duo} alt="Kat and Mike posing in leather and chains" data-parallax="6" />
+              <img src={photos.duo} alt={t.alts.duo} data-parallax="6" />
             </div>
             <span className="about__glare" aria-hidden="true" />
             <figcaption>K4T AND MIK€</figcaption>

@@ -1,4 +1,5 @@
 import { useId, useRef } from 'react'
+import { useI18n } from '../i18n'
 import { gsap, prefersReducedMotion, useGSAP } from '../lib/gsap'
 import { scrollState } from '../lib/scroll'
 
@@ -6,6 +7,7 @@ type VinylProps = { className?: string; speed?: number; text?: string }
 
 /** Spinning record. Spins faster while the page is scrolling. */
 export const Vinyl = ({ className, speed = 1, text = 'KAT & MIKE · GROOVE BASS · STREET FUNK · ' }: VinylProps) => {
+  const { t } = useI18n()
   const disc = useRef<SVGGElement>(null)
   const uid = useId()
 
@@ -24,7 +26,7 @@ export const Vinyl = ({ className, speed = 1, text = 'KAT & MIKE · GROOVE BASS 
   const grooves = [92, 84, 77, 71, 66, 61, 57, 53]
 
   return (
-    <svg className={className} viewBox="0 0 200 200" role="img" aria-label="Spinning vinyl record">
+    <svg className={className} viewBox="0 0 200 200" role="img" aria-label={t.a11y.vinyl}>
       <defs>
         <radialGradient id={`${uid}-sheen`} cx="35%" cy="30%" r="80%">
           <stop offset="0" stopColor="#fff" stopOpacity="0.16" />

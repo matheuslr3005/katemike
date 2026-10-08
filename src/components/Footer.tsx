@@ -30,7 +30,7 @@ export const Footer = () => {
     <footer ref={root} id="contact" className="footer">
       <div className="wrap footer__top">
         <p className="label" data-reveal>{t.contact.label}</p>
-        <h2 className="display footer__title" data-split="lines">{t.contact.title}</h2>
+        <h2 key={lang} className="display footer__title" data-split="lines">{t.contact.title}</h2>
 
         <div className="footer__links">
           <div data-reveal>
@@ -59,6 +59,12 @@ export const Footer = () => {
 
       <div className="wrap footer__bottom">
         <span>© {new Date().getFullYear()} Kat &amp; Mike. {t.footer.rights}</span>
+        <span className="footer__credit">
+          {t.footer.producedBy}{' '}
+          <a href={site.laxUrl} target="_blank" rel="noopener noreferrer">
+            Lax
+          </a>
+        </span>
         <span>{t.footer.made}</span>
       </div>
     </footer>

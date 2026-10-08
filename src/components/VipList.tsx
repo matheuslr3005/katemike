@@ -37,8 +37,8 @@ export const VipList = () => {
     setStatus('sending')
 
     if (!site.vipFormEndpoint) {
-      const body = `Name: ${data.name}\nE-mail: ${data.email}\nWhatsApp: ${data.whatsapp}`
-      window.location.href = mailtoLink('VIP list', body)
+      const body = `${t.vip.name}: ${data.name}\n${t.vip.email}: ${data.email}\n${t.vip.whatsapp}: ${data.whatsapp}`
+      window.location.href = mailtoLink(t.contact.subjects.vip, body)
       setStatus('done')
       form.reset()
       return
@@ -64,7 +64,7 @@ export const VipList = () => {
         <div className="vip__card">
           <div className="vip__intro">
             <p className="label" data-reveal>{t.vip.label}</p>
-            <h2 id="vip-title" className="display vip__title" data-split="lines">{t.vip.title}</h2>
+            <h2 key={lang} id="vip-title" className="display vip__title" data-split="lines">{t.vip.title}</h2>
             <p className="vip__sub" data-reveal>{t.vip.sub}</p>
           </div>
 

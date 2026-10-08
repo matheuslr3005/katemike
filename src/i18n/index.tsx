@@ -5,6 +5,11 @@ import { pt } from './pt'
 
 export type Lang = 'en' | 'pt' | 'es'
 
+/** Plain string (same in every language, e.g. a venue name) or a per-language map. */
+export type Localized = string | Record<Lang, string>
+
+export const localize = (value: Localized, lang: Lang): string => (typeof value === 'string' ? value : value[lang])
+
 const dictionaries: Record<Lang, Dict> = { en, pt, es }
 const STORAGE_KEY = 'km-lang'
 const HTML_LANG: Record<Lang, string> = { en: 'en', pt: 'pt-BR', es: 'es' }
@@ -40,6 +45,11 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     document.documentElement.lang = HTML_LANG[lang]
+    const { title, description } = dictionaries[lang].meta
+    document.title = title
+    document.querySelector('meta[name="description"]')?.setAttribute('content', description)
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', title)
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', description)
   }, [lang])
 
   const value = useMemo<I18nValue>(() => ({ lang, t: dictionaries[lang], setLang }), [lang, setLang])

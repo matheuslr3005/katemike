@@ -43,11 +43,11 @@ export const Nav = () => {
   return (
     <>
       <header ref={root} className={`nav ${open ? 'is-open' : ''}`}>
-      <a className="nav__logo" href="#top" onClick={go('#top')} aria-label="Kat & Mike — home">
+      <a className="nav__logo" href="#top" onClick={go('#top')} aria-label={t.a11y.home}>
         Kat<span>&amp;</span>Mike
       </a>
 
-      <nav className="nav__links" aria-label="Primary">
+      <nav className="nav__links" aria-label={t.a11y.primaryNav}>
         {links.map((link) => (
           <a key={link.href} href={link.href} onClick={go(link.href)} className="nav__link">
             {link.label}
@@ -56,7 +56,7 @@ export const Nav = () => {
       </nav>
 
       <div className="nav__right">
-        <div className="lang" role="group" aria-label="Language">
+        <div className="lang" role="group" aria-label={t.a11y.language}>
           {LANGS.map((code) => (
             <button
               key={code}
@@ -81,7 +81,7 @@ export const Nav = () => {
           className="burger"
           aria-expanded={open}
           aria-controls="mobile-menu"
-          aria-label="Menu"
+          aria-label={t.a11y.menu}
           onClick={() => setOpen((v) => !v)}
         >
           <span />

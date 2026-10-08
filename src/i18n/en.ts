@@ -84,8 +84,19 @@ export const en = {
     mgmt: 'Management',
     press: 'Press kit',
     follow: 'Follow',
+    subjects: { booking: 'Booking — Kat & Mike', join: 'Masterclass — I want in', question: 'Masterclass — question', vip: 'VIP list' },
   },
-  footer: { rights: 'All rights reserved.', made: 'Dublin · São Paulo' },
+  footer: { rights: 'All rights reserved.', made: 'Dublin · São Paulo', producedBy: 'Produced by' },
+  meta: { title: 'Kat & Mike — DJs & Producers · Dublin', description: 'Brazilian DJ & producer duo based in Dublin, Ireland. Groove Bass, street funk and São Paulo nightlife — live across Europe. Join the Kat & Mike DJ Masterclass.' },
+  a11y: { loading: 'Loading', home: 'Kat & Mike — home', primaryNav: 'Primary', language: 'Language', menu: 'Menu', vinyl: 'Spinning vinyl record' },
+  alts: {
+    duo: 'Kat and Mike posing in leather and chains',
+    duoParty: 'Kat and Mike posing together in green and white jackets',
+    katDeck: 'Kat mixing behind the decks',
+    katHeart: 'Kat making a heart with her hands',
+    mikeGreen: 'Mike smiling at the booth',
+    mikeMic: 'Mike on the mic wearing a Technics headband',
+  },
   cursor: { drag: 'Drag', view: 'View' },
 }
 

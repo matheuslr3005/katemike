@@ -1,7 +1,7 @@
 import { useRef, useState, type MouseEvent } from 'react'
 import { photos } from '../assets/photos'
 import { events, type GigEvent } from '../data/events'
-import { useI18n, type Lang } from '../i18n'
+import { localize, useI18n, type Lang } from '../i18n'
 import { contactLink } from '../config/site'
 import { gsap, isFinePointer, prefersReducedMotion, useGSAP } from '../lib/gsap'
 import { setupReveals } from '../lib/reveal'
@@ -78,7 +78,7 @@ export const Events = () => {
       <div className="wrap">
         <p className="label" data-reveal>{t.events.label}</p>
         <div className="events__head">
-          <h2 className="display" data-split="lines">{t.events.title}</h2>
+          <h2 key={lang} className="display" data-split="lines">{t.events.title}</h2>
           <p className="events__sub" data-reveal>{t.events.sub}</p>
         </div>
 
@@ -104,10 +104,10 @@ export const Events = () => {
                   )}
                 </span>
                 <span className="event__where">
-                  <strong>{event.city}</strong>
+                  <strong>{localize(event.city, lang)}</strong>
                   <em>{event.country}</em>
                 </span>
-                <span className="event__venue">{event.venue}</span>
+                <span className="event__venue">{localize(event.venue, lang)}</span>
                 <a
                   className="event__action"
                   href={event.url ?? '#vip'}
@@ -126,7 +126,7 @@ export const Events = () => {
         <div className="events__book" data-reveal>
           <p className="events__book-title">{t.events.bookTitle}</p>
           <Magnetic>
-            <a className="btn btn--gold" href={contactLink('Booking — Kat & Mike')} target="_blank" rel="noreferrer">
+            <a className="btn btn--gold" href={contactLink(t.contact.subjects.booking)} target="_blank" rel="noreferrer">
               {t.events.bookCta}
               <span className="btn__arrow" aria-hidden="true">→</span>
             </a>

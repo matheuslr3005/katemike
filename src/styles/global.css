@@ -1525,6 +1525,15 @@ p {
   letter-spacing: -0.04em;
   color: var(--gold);
 }
+.footer__credit a {
+  color: var(--gold);
+  font-weight: 700;
+  border-bottom: 1px solid currentColor;
+  transition: color 0.3s;
+}
+.footer__credit a:hover {
+  color: var(--ink);
+}
 .footer__bottom {
   display: flex;
   justify-content: space-between;

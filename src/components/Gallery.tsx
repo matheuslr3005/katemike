@@ -5,14 +5,14 @@ import { gsap, prefersReducedMotion, useGSAP } from '../lib/gsap'
 import { setupReveals } from '../lib/reveal'
 import { scrollState } from '../lib/scroll'
 
-type Shot = { key: PhotoKey; alt: string; ratio: string }
+type Shot = { key: PhotoKey; ratio: string }
 
 const shots: readonly Shot[] = [
-  { key: 'duoParty', alt: 'Kat and Mike posing together in green and white jackets', ratio: '5 / 4' },
-  { key: 'mikeMic', alt: 'Mike on the mic', ratio: '2 / 3' },
-  { key: 'katDeck', alt: 'Kat mixing behind the decks', ratio: '3 / 2' },
-  { key: 'mikeGreen', alt: 'Mike smiling at the booth', ratio: '2 / 3' },
-  { key: 'katHeart', alt: 'Kat making a heart with her hands', ratio: '4 / 5' },
+  { key: 'duoParty', ratio: '5 / 4' },
+  { key: 'mikeMic', ratio: '2 / 3' },
+  { key: 'katDeck', ratio: '3 / 2' },
+  { key: 'mikeGreen', ratio: '2 / 3' },
+  { key: 'katHeart', ratio: '4 / 5' },
 ]
 
 export const Gallery = () => {
@@ -93,12 +93,12 @@ export const Gallery = () => {
     <section ref={root} className="gallery section" aria-labelledby="gallery-title">
       <div className="wrap">
         <p className="label" data-reveal>{t.gallery.label}</p>
-        <h2 id="gallery-title" className="display" data-split="lines">{t.gallery.title}</h2>
+        <h2 key={lang} id="gallery-title" className="display" data-split="lines">{t.gallery.title}</h2>
       </div>
       <div ref={reel} className="reel" data-cursor={t.cursor.drag} tabIndex={0} role="group" aria-label={t.gallery.title}>
         {shots.map((shot) => (
           <figure key={shot.key} className="shot" style={{ aspectRatio: shot.ratio }}>
-            <img src={photos[shot.key]} alt={shot.alt} loading="lazy" draggable={false} />
+            <img src={photos[shot.key]} alt={t.alts[shot.key]} loading="lazy" draggable={false} />
           </figure>
         ))}
       </div>
