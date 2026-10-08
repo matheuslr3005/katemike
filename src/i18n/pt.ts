@@ -1,0 +1,92 @@
+import type { Dict } from './en'
+
+export const pt: Dict = {
+  nav: { about: 'História', events: 'Shows', masterclass: 'Masterclass', contact: 'Contato', cta: 'Entrar na Masterclass' },
+  hero: {
+    eyebrow: 'Dupla de DJs & Produtores — Dublin, Irlanda',
+    tagline: 'Groove Bass. Funk de rua. Noites de São Paulo. Direto para as pistas da Europa.',
+    ctaPrimary: 'Entrar na Masterclass',
+    ctaSecondary: 'Contratar a dupla',
+    scroll: 'Role',
+  },
+  marquee: ['Groove Bass', 'Street Funk', 'São Paulo', 'Dublin', 'Cartel Room Mafia DJs', 'Masterclass de DJ'],
+  about: {
+    label: 'A história',
+    manifesto:
+      'Dupla brasileira de DJs e produtores musicais baseada em Dublin, na Irlanda. Groove Bass, street funk e a cena noturna de São Paulo — um set impecável, mixagem precisa e uma conexão incomparável com o público.',
+    body:
+      'Além de produzir beats autorais, Kat & Mike são porta-vozes dos MCs e DJs brasileiros na cena musical irlandesa, ampliando a visibilidade da cultura brasileira na Europa. Forte presença nos principais eventos de Dublin, turnê recente em Dubai e sets em mais de sete países europeus.',
+    stats: [
+      { value: 7, suffix: '+', label: 'Países na Europa' },
+      { value: 1, suffix: 'x', label: 'Turnê em Dubai — e vem mais' },
+      { value: 7, suffix: 'K+', label: 'Comunidade no Instagram' },
+    ],
+  },
+  duo: {
+    label: 'A dupla',
+    title: 'Escolha um lado.',
+    hint: 'Arraste o crossfader',
+    kat: 'Kat',
+    mike: 'Mike',
+    caption: 'Dois selectors. Um som. Deslize — a mixagem nunca é a mesma.',
+  },
+  events: {
+    label: 'Próximos shows',
+    title: 'Vem pra pista',
+    sub: 'As datas saem primeiro na lista VIP.',
+    tba: 'A confirmar',
+    cta: 'Quero ser avisado',
+    bookTitle: 'Sua cidade, sua noite?',
+    bookCta: 'Contratar Kat & Mike',
+  },
+  masterclass: {
+    label: 'Masterclass de DJ',
+    title: 'Aprenda a ser DJ com quem está nas pickups.',
+    sub: 'Cursos de DJ presenciais e profissionais com Kat & Mike — as mesmas técnicas que levam às melhores noites de Dublin e a palcos de sete países, ensinadas para novos talentos.',
+    ctaPrimary: 'Quero entrar',
+    ctaSecondary: 'Tirar uma dúvida',
+    modulesTitle: 'O que você vai aprender',
+    forTitle: 'Para quem é',
+    forItems: [
+      'Iniciantes que querem começar do jeito certo',
+      'DJs de quarto prontos para tocar para um público real',
+      'Produtores que querem performar o próprio som',
+    ],
+    formatTitle: 'O formato',
+    formatItems: [
+      { k: 'Presencial', v: 'Mão na massa, em pickups de verdade' },
+      { k: 'Profissional', v: 'Ensinado por DJs de clube em atividade' },
+      { k: 'Local', v: 'Dublin, Irlanda' },
+    ],
+    priceNote: 'Datas, valor e próxima turma enviados sob consulta.',
+    faqTitle: 'Dúvidas',
+    faq: [
+      { q: 'Preciso ter experiência?', a: 'Não. Moldamos o conteúdo para o ponto em que você está hoje — do primeiro mix ao primeiro booking.' },
+      { q: 'Preciso ter equipamento?', a: 'Conta pra gente o que você tem e a gente orienta. A prática é em equipamento de clube de verdade.' },
+      { q: 'Onde acontece?', a: 'Presencial, em Dublin. Fale com a gente se quiser que a gente vá até a sua cidade.' },
+      { q: 'Como me inscrevo?', a: 'Clique em “Quero entrar”. Respondemos com as próximas datas e tudo o que você precisa saber.' },
+    ],
+  },
+  gallery: { label: 'Nas pickups', title: 'Flagras da cabine' },
+  vip: {
+    label: 'Lista VIP',
+    title: 'Entre na lista VIP',
+    sub: 'Receba músicas, datas de shows e novidades da Masterclass antes de todo mundo.',
+    name: 'Nome',
+    email: 'E-mail',
+    whatsapp: 'WhatsApp',
+    submit: 'Entrar',
+    sending: 'Enviando…',
+    thanks: 'Você está dentro. Te vejo na pista.',
+    error: 'Algo deu errado. Tente de novo ou chame a gente no Instagram.',
+  },
+  contact: {
+    label: 'Contato',
+    title: 'Bora fazer barulho.',
+    mgmt: 'Management',
+    press: 'Press kit',
+    follow: 'Siga',
+  },
+  footer: { rights: 'Todos os direitos reservados.', made: 'Dublin · São Paulo' },
+  cursor: { drag: 'Arraste', view: 'Ver' },
+}

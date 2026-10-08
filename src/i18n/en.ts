@@ -1,0 +1,92 @@
+export const en = {
+  nav: { about: 'Story', events: 'Gigs', masterclass: 'Masterclass', contact: 'Contact', cta: 'Join the Masterclass' },
+  hero: {
+    eyebrow: 'DJs & Producers Duo — Dublin, Ireland',
+    tagline: 'Groove Bass. Street funk. São Paulo nights. Straight to the dance floors of Europe.',
+    ctaPrimary: 'Join the Masterclass',
+    ctaSecondary: 'Book the duo',
+    scroll: 'Scroll',
+  },
+  marquee: ['Groove Bass', 'Street Funk', 'São Paulo', 'Dublin', 'Cartel Room Mafia DJs', 'DJ Masterclass'],
+  about: {
+    label: 'The story',
+    manifesto:
+      'Brazilian DJ and music producer duo based in Dublin, Ireland. Groove Bass, street funk and the São Paulo nightclub scene — a flawless set, precise mixing and an unmatched connection with the audience.',
+    body:
+      'Beyond producing original beats, Kat & Mike are spokespeople for Brazilian MCs and DJs in the Irish music scene, expanding the visibility of Brazilian culture across Europe. A strong presence in Dublin’s top events, a recent tour in Dubai, and sets in over seven countries across Europe.',
+    stats: [
+      { value: 7, suffix: '+', label: 'Countries across Europe' },
+      { value: 1, suffix: 'x', label: 'Dubai tour — and counting' },
+      { value: 7, suffix: 'K+', label: 'Community on Instagram' },
+    ],
+  },
+  duo: {
+    label: 'The duo',
+    title: 'Pick a side.',
+    hint: 'Drag the crossfader',
+    kat: 'Kat',
+    mike: 'Mike',
+    caption: 'Two selectors. One sound. Slide it — the mix is never the same.',
+  },
+  events: {
+    label: 'Next gigs',
+    title: 'See us live',
+    sub: 'Dates are announced first on the VIP list.',
+    tba: 'TBA',
+    cta: 'Get notified',
+    bookTitle: 'Your city, your night?',
+    bookCta: 'Book Kat & Mike',
+  },
+  masterclass: {
+    label: 'DJ Masterclass',
+    title: 'Learn to DJ from the people on the decks.',
+    sub: 'In-person and professional DJ courses by Kat & Mike — the same techniques they bring to Dublin’s top nights and stages across seven countries, taught to emerging talent.',
+    ctaPrimary: 'I want in',
+    ctaSecondary: 'Ask a question',
+    modulesTitle: 'What you’ll learn',
+    forTitle: 'Who it’s for',
+    forItems: [
+      'Beginners who want to start the right way',
+      'Bedroom DJs ready to play to a real crowd',
+      'Producers who want to perform their own sound',
+    ],
+    formatTitle: 'The format',
+    formatItems: [
+      { k: 'In person', v: 'Hands-on, behind real decks' },
+      { k: 'Professional', v: 'Taught by working club DJs' },
+      { k: 'Based in', v: 'Dublin, Ireland' },
+    ],
+    priceNote: 'Dates, price and next intake shared on request.',
+    faqTitle: 'Questions',
+    faq: [
+      { q: 'Do I need experience?', a: 'No. We shape the content around where you are today — from your first mix to your first booking.' },
+      { q: 'Do I need my own equipment?', a: 'Tell us what you have and we’ll advise. Practice is behind real club gear.' },
+      { q: 'Where does it happen?', a: 'In person, in Dublin. Reach out if you’d like us to come to your city.' },
+      { q: 'How do I sign up?', a: 'Hit “I want in”. We’ll reply with the next dates and everything you need to know.' },
+    ],
+  },
+  gallery: { label: 'On the decks', title: 'Caught in the booth' },
+  vip: {
+    label: 'VIP list',
+    title: 'Join the VIP list',
+    sub: 'Get music, gig dates and Masterclass updates before anyone else.',
+    name: 'Name',
+    email: 'E-mail',
+    whatsapp: 'WhatsApp',
+    submit: 'Join',
+    sending: 'Sending…',
+    thanks: 'You’re in. See you on the dance floor.',
+    error: 'Something went wrong. Try again or message us on Instagram.',
+  },
+  contact: {
+    label: 'Contact',
+    title: 'Let’s make noise.',
+    mgmt: 'Management',
+    press: 'Press kit',
+    follow: 'Follow',
+  },
+  footer: { rights: 'All rights reserved.', made: 'Dublin · São Paulo' },
+  cursor: { drag: 'Drag', view: 'View' },
+}
+
+export type Dict = typeof en
