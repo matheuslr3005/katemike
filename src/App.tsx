@@ -11,10 +11,12 @@ import { Gallery } from './components/Gallery'
 import { Hero } from './components/Hero'
 import { Marquee } from './components/Marquee'
 import { Masterclass } from './components/Masterclass'
+import { MusicPlayer } from './components/MusicPlayer'
 import { Nav } from './components/Nav'
 import { VipList } from './components/VipList'
 import { I18nProvider, useI18n } from './i18n'
 import { ScrollTrigger } from './lib/gsap'
+import { MusicProvider } from './lib/music'
 import { initSmoothScroll } from './lib/scroll'
 
 const Page = () => {
@@ -54,12 +56,15 @@ const Page = () => {
       </main>
       <Footer />
       <FloatingCta />
+      <MusicPlayer visible={ready} />
     </>
   )
 }
 
 export const App = () => (
   <I18nProvider>
-    <Page />
+    <MusicProvider>
+      <Page />
+    </MusicProvider>
   </I18nProvider>
 )

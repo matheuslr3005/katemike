@@ -111,7 +111,7 @@ export const es: Dict = {
   },
   footer: { rights: 'Todos los derechos reservados.', made: 'Dublín · São Paulo', producedBy: 'Producido por' },
   meta: { title: 'Kat & Mike — DJs y Productores · Dublín', description: 'Dúo brasileño de DJs y productores con base en Dublín, Irlanda. Groove Bass, street funk y la noche de São Paulo — en vivo por toda Europa. Únete a la Masterclass de DJ de Kat & Mike.' },
-  intro: { loading: 'Cargando el set', skip: 'Saltar intro' },
+  intro: { loading: 'Cargando el set', skip: 'Saltar intro', sound: 'Pulsa START para activar el sonido', soundOn: 'Sonido activado' },
   a11y: { deck: 'Tocadiscos de DJ', loading: 'Cargando', home: 'Kat & Mike — inicio', primaryNav: 'Principal', language: 'Idioma', menu: 'Menú', vinyl: 'Disco de vinilo girando' },
   alts: {
     duo: 'Kat y Mike posando con chaqueta de cuero y cadenas',
@@ -120,6 +120,15 @@ export const es: Dict = {
     katHeart: 'Kat haciendo un corazón con las manos',
     mikeGreen: 'Mike sonriendo en la cabina',
     mikeMic: 'Mike al micrófono con una cinta Technics',
+  },
+  music: {
+    label: 'Música',
+    play: 'Reproducir música',
+    pause: 'Pausar música',
+    next: 'Siguiente pista',
+    prev: 'Pista anterior',
+    cta: 'Activar sonido',
+    nowPlaying: 'Sonando ahora',
   },
   cursor: { drag: 'Arrastra', view: 'Ver' },
 }

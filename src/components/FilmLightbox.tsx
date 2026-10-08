@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
 import type { Film } from '../data/films'
 import { localize, useI18n } from '../i18n'
 import { gsap, prefersReducedMotion, useGSAP } from '../lib/gsap'
+import { useMusic } from '../lib/music'
 import { lockScroll } from '../lib/scroll'
 import { copyText, filmLink } from '../lib/share'
 import { resolveMedia, type Playable } from '../lib/video'
@@ -45,6 +46,7 @@ const MediaFrame = ({ media, title }: { media: Playable; title: string }) => {
 
 export const FilmLightbox = ({ film, onClose }: FilmLightboxProps) => {
   const { t, lang } = useI18n()
+  const { duck } = useMusic()
   const root = useRef<HTMLDivElement>(null)
   const closeBtn = useRef<HTMLButtonElement>(null)
   const closing = useRef(false)
@@ -76,9 +78,13 @@ export const FilmLightbox = ({ film, onClose }: FilmLightboxProps) => {
 
   useEffect(() => {
     lockScroll(true)
+    duck(true)
     closeBtn.current?.focus()
-    return () => lockScroll(false)
-  }, [])
+    return () => {
+      lockScroll(false)
+      duck(false)
+    }
+  }, [duck])
 
   useGSAP(
     () => {

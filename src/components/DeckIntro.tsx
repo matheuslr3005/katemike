@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { useI18n } from '../i18n'
 import { gsap, prefersReducedMotion, useGSAP } from '../lib/gsap'
 import { lockScroll } from '../lib/scroll'
+import { useMusic } from '../lib/music'
 import { filmIdFromHash } from '../lib/share'
 
 type DeckIntroProps = { onExit: () => void }
@@ -24,6 +25,7 @@ const PITCH_TICKS = Array.from({ length: 11 }, (_, i) => 214 + i * 24.6)
  */
 export const DeckIntro = ({ onExit }: DeckIntroProps) => {
   const { t } = useI18n()
+  const music = useMusic()
   const root = useRef<HTMLDivElement>(null)
   const ring = useRef<HTMLDivElement>(null)
   const camera = useRef<HTMLDivElement>(null)
@@ -225,7 +227,15 @@ export const DeckIntro = ({ onExit }: DeckIntroProps) => {
               </g>
 
               {/* Buttons */}
-              <g className="deck__start-btn">
+              <g
+                className="deck__start-btn"
+                role="button"
+                tabIndex={0}
+                aria-label="START"
+                onClick={() => music.start(true)}
+                onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && music.start(true)}
+              >
+                <circle cx="700" cy="566" r="46" fill="transparent" />
                 <circle cx="700" cy="566" r="34" fill="#121213" stroke="url(#deck-metal)" strokeWidth="3" />
                 <circle cx="700" cy="566" r="25" fill="#1d1d20" />
                 <circle className="deck__led" cx="700" cy="566" r="9" fill="#e8372f" opacity="0.18" />
@@ -292,7 +302,20 @@ export const DeckIntro = ({ onExit }: DeckIntroProps) => {
             <i>%</i>
           </span>
         </div>
-        <button type="button" className="intro__skip" onClick={() => skipRef.current()}>
+        {music.available && !music.muted && (
+          <p className={`intro__sound ${music.playing ? 'is-on' : ''}`} aria-live="polite">
+            <span className="intro__bars" aria-hidden="true"><i /><i /><i /></span>
+            {music.playing ? t.intro.soundOn : t.intro.sound}
+          </p>
+        )}
+        <button
+          type="button"
+          className="intro__skip"
+          onClick={() => {
+            music.start()
+            skipRef.current()
+          }}
+        >
           {t.intro.skip}
         </button>
       </div>

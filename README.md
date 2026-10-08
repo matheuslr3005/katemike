@@ -17,6 +17,7 @@ npm run preview
 | --- | --- |
 | Instagram, e-mail de management, **WhatsApp**, link de compra da Masterclass, endpoint do formulário VIP | `src/config/site.ts` |
 | Próximos shows (data, cidade, venue, link de ingresso) | `src/data/events.ts` |
+| **Músicas de fundo** (playlist) | `src/data/tracks.ts` + arquivos em `public/music/` |
 | **After movies e sets** (vídeos de eventos já realizados) | `src/data/films.ts` |
 | Módulos da Masterclass (EN/PT) | `src/data/masterclass.ts` |
 | Todos os textos do site (EN e PT-BR) | `src/i18n/en.ts` e `src/i18n/pt.ts` |
@@ -31,6 +32,16 @@ npm run preview
 ### Eventos
 `date: null` mostra "TBA". Para um show confirmado: `date: '2026-11-21'`, `url: 'https://…'`.
 A lista atual é **placeholder**.
+
+## Como adicionar as músicas de fundo
+1. Coloque os arquivos (MP3, ideal 128 kbps ≈ 1 MB por minuto) em `public/music/`.
+2. Liste em `src/data/tracks.ts`:
+   ```ts
+   { id: 'faixa-1', title: 'Nome da faixa', artist: 'Kat & Mike', src: './music/faixa-1.mp3' },
+   ```
+Tocam em ordem e voltam ao início. Enquanto a lista estiver vazia, o player não aparece.
+
+**Como o som começa:** navegadores bloqueiam áudio automático, então a música liga no primeiro gesto da pessoa: botão **START** da mesa de DJ, "Pular abertura" ou o primeiro clique no site. Tem player flutuante (play/pause, anterior/próxima), a música abaixa sozinha ao abrir um after movie, pausa com a aba escondida e, se a pessoa pausar, o site lembra e não toca de novo nas próximas visitas.
 
 ## Como adicionar um after movie ou set
 Em `src/data/films.ts`, copie um item e preencha (mais novo primeiro):
